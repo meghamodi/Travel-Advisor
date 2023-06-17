@@ -6,6 +6,8 @@ import Map from './components/Map/Map'
 import { getPlaceData } from './api'
 const App = () => {
   const [places, setPlaces] = useState([])
+  const [coordinates, setCoordinates] = useState({})
+  const [bounds, setBounds] = useState(null)
   useEffect(() => {
     getPlaceData().then(data => {
       console.log(data)
